@@ -36,6 +36,7 @@ namespace ACME.Controllers
         }
 
         // GET: Products/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -46,16 +47,30 @@ namespace ACME.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductId,Name,Price")] Product product)
+        public ActionResult Create([Bind(Include ="ProductId, Name, Price")] Product product) // Bind prevents from over binding - bit.do/overpost
         {
-            if (ModelState.IsValid)
-            {
-                product.ProductId = Guid.NewGuid();
-                db.Products.Add(product);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            
+             if (ModelState.IsValid)
+             {
+                 product.ProductId = Guid.NewGuid();
+                 db.Products.Add(product);
+                 db.SaveChanges();
+                 return RedirectToAction("Index");
+             } 
+            /* weakly type
+            var product = new Product();
+            product.ProductId = Guid.NewGuid();
+            product.Name = Request["Name"];
+            product.Price = Decimal.Parse(Request["Price"]);
 
+              */
+              /*
+            var product = new Product();
+            product.ProductId = Guid.NewGuid();
+            product.Name = Name;
+            product.Price = Price;
+
+    */
             return View(product);
         }
 

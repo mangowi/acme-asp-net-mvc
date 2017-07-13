@@ -11,10 +11,16 @@ namespace ACME.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
+
+    // Partial means we can extend this class with another class
+    // That we can create another class that 
     public partial class Product
     {
         public System.Guid ProductId { get; set; }
+
+      
         public string Name { get; set; }
         public decimal Price { get; set; }
     }

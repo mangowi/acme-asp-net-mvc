@@ -186,6 +186,7 @@
     <Compile Include="Models\Product.cs">
       <DependentUpon>ACMEProductsEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
