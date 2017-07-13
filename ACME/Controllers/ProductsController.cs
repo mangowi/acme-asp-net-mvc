@@ -71,6 +71,9 @@ namespace ACME.Controllers
             {
                 return HttpNotFound();
             }
+
+            var myValue = Request.QueryString["somesuch"];
+            var myOtherValue = Request["somesuch"];
             return View(product);
         }
 
