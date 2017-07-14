@@ -48,7 +48,7 @@ namespace ACME.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include ="ProductId, Name, Price")] Product product) // Bind prevents from over binding - bit.do/overpost
-        {
+        {/*
             if (string.IsNullOrEmpty(product.Name))
             {
                 ModelState.AddModelError("Name", "Name is required");
@@ -57,7 +57,7 @@ namespace ACME.Controllers
             {
                 ModelState.AddModelError("Price", "Please enter a valid price between DKK 0,01 and DKK 1000, 00 ");
 
-            }
+            }*/
 
             if (ModelState.IsValid)
              {
