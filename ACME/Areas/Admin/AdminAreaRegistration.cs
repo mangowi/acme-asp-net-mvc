@@ -2,7 +2,7 @@
 
 namespace ACME.Areas.Areas
 {
-    public class AreasAreaRegistration : AreaRegistration 
+    public class AdminAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
