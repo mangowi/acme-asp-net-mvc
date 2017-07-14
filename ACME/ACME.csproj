@@ -149,7 +149,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Areas\Areas\Views\web.config" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -165,7 +172,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Areas\AreasAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\AreasAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -220,9 +228,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\Areas\Controllers\" />
-    <Folder Include="Areas\Areas\Models\" />
-    <Folder Include="Areas\Areas\Views\Shared\" />
+    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
