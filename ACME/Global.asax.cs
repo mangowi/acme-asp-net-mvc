@@ -11,7 +11,7 @@ namespace ACME
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            AreaRegistration.RegisterAllAreas(); //Making sure we have it on global asax
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }
