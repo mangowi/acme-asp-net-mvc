@@ -15,12 +15,12 @@ namespace ACME.Models
             [Key]
             public System.Guid ProductId { get;  set; }
 
-            [Required]
+            //[Required]
             [Display(Name = "Product Name")]
             [StringLength(10)]
             public string  Name { get; set; }
 
-            [Required]
+            //[Required]
             [RegularExpression(@" /^\d+(?:\.\d{2})?DKK")]
             public decimal Price { get; set; }
         }
