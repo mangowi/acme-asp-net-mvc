@@ -8,8 +8,9 @@
 
 <p>
     @Html.ActionLink("Create New", "Create") <br />
-    @Html.ActionLink("Create New use Tooltip", "Create",null,  htmlAttributes: new { data_toogle= "tooltip", data_placement="right", title="Click here to create a new Product"})
-
+    @Html.ActionLink("Create New use Tooltip", "Create",null,  htmlAttributes: new { data_toogle= "tooltip", data_placement="right", title="Click here to create a new Product"})<br />
+    @Html.ActionLink("Create New using Dictionary", "Create", null, new Dictionary<string, object> { {"data-toggle", "tooltip" }, {"data-placement", "right" }, { "title", "Click here to create new product"} }) <br />
+    
     @Html.ActionLink("Create V3", "Create", new RouteValueDictionary(new { locale = "da-DK", year = DateTime.Now.Year.ToString() })) <br />
 
 
