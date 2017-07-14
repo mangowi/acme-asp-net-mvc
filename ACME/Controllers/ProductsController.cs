@@ -17,6 +17,8 @@ namespace ACME.Controllers
         // GET: Products
         public ActionResult Index()
         {
+
+            View("SomeOtherView");
             return View(db.Products.ToList());
         }
 
