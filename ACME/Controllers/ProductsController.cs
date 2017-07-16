@@ -69,7 +69,7 @@ namespace ACME.Controllers
 
             if (ModelState.IsValid)
             {
-                TempData["message"] = "Item was created";
+                TempData["message"] = "Item '" + product.Name + "' was created'";
                  product.ProductId = Guid.NewGuid();
                  db.Products.Add(product);
                  db.SaveChanges();
