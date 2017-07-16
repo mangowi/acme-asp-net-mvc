@@ -18,7 +18,7 @@ namespace ACME.Controllers
         public ActionResult Index()
         {
 
-            View("SomeOtherView");
+            //View("SomeOtherView");
             return View(db.Products.ToList());
         }
 
@@ -62,7 +62,8 @@ namespace ACME.Controllers
             }*/
 
             if (ModelState.IsValid)
-             {
+            {
+                TempData["message"] = "Item was created";
                  product.ProductId = Guid.NewGuid();
                  db.Products.Add(product);
                  db.SaveChanges();

@@ -21,7 +21,7 @@ namespace ACME.Models
             public string  Name { get; set; }
 
             [Required]
-            [RegularExpression(@" /^\d+(?:\.\d{2})?DKK")]
+            //[RegularExpression(@" /^\d+(?:\.\d{2})?DKK")]
             //[Range(0.01, 1000.0)]
             public decimal Price { get; set; }
         }
