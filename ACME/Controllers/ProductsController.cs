@@ -18,6 +18,12 @@ namespace ACME.Controllers
         public ActionResult Index()
         {
 
+            var valueHold = TempData.Peek("message") == null ? "" : TempData.Peek("message").ToString();
+            if (valueHold.Contains("mangowi"))
+            {
+              TempData.Keep("message");
+            }
+
             //View("SomeOtherView");
             return View(db.Products.ToList());
         }
